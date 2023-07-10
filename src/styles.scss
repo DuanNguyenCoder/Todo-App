@@ -1,0 +1,23 @@
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 29%,
+    rgba(8, 155, 185, 1) 100%
+  );
+  .btn {
+    color: white;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .btn-hl-bottom {
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+    &:hover {
+      color: rgb(255, 99, 71);
+      border-color: rgb(255, 99, 71);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.update-form {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  .content-left {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    input {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .content-update {
+    display: flex;
+  }
+  .content-right {
+    display: flex;
+    justify-content: end;
+    .btn-update {
+      border-bottom: none;
+      background-color: rgb(232, 180, 61);
+    }
+    .btn-cancel {
+      border-right: none;
+      border-bottom: none;
+      background-color: rgb(255, 99, 71);
+    }
+  }
+  p {
+    margin: 0;
+    background-color: green;
+  }
+}

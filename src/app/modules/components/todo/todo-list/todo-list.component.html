@@ -1,0 +1,30 @@
+<div class="list-todo">
+  <div class="list-head">
+    <h2>List todos</h2>
+    <app-confirm-form></app-confirm-form>
+    <form class="find-form">
+      <input
+        class="input-find"
+        type=""
+        name=""
+        value=""
+        #findInput
+        placeholder="Find task..."
+      />
+      <button
+        class="btn-find btn"
+        (click)="findTask(findInput.value)"
+        type="button"
+      >
+        FIND
+      </button>
+    </form>
+  </div>
+  <div class="list-task">
+    <app-todo-task
+      *ngFor="let item of data"
+      [listTask]="data"
+      [task]="item"
+    ></app-todo-task>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="filter-form">
+  <div class="btn mg">count: {{ count }}</div>
+  <div
+    [ngClass]="[
+      filter === todoShare.filter.ALL
+        ? 'forcus-filter btn btn-hl-bottom'
+        : 'btn btn-hl-bottom'
+    ]"
+    (click)="onAll()"
+  >
+    All
+  </div>
+  <div
+    [ngClass]="[
+      filter === todoShare.filter.ACTIVE
+        ? 'forcus-filter btn btn-hl-bottom'
+        : 'btn btn-hl-bottom'
+    ]"
+    (click)="onActive()"
+  >
+    Active
+  </div>
+  <div
+    [ngClass]="[
+      filter === todoShare.filter.COMPLETE
+        ? 'forcus-filter btn btn-hl-bottom'
+        : 'btn btn-hl-bottom'
+    ]"
+    (click)="onComplete()"
+  >
+    Complete
+  </div>
+  <div class="btn mg" (click)="onClear()">Clear all</div>
+</div>

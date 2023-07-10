@@ -1,0 +1,29 @@
+<form
+  [formGroup]="formData"
+  *ngIf="openModal && Task === taskChooseCurrent"
+  class="update-form"
+>
+  <p>Update Task</p>
+  <div class="content-update">
+    <div class="content-left">
+      <input formControlName="taskNameForm" type="text" name="" />
+      <input formControlName="dateTimeForm" type="datetime-local" name="" />
+    </div>
+    <div class="content-right">
+      <input
+        type="button"
+        name=""
+        (click)="onUpdate()"
+        value="Update"
+        class="btn-update"
+      />
+      <input
+        type="button"
+        name=""
+        (click)="onCancel()"
+        value="Cancel"
+        class="btn-cancel"
+      />
+    </div>
+  </div>
+</form>

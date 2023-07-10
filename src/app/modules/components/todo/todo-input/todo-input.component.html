@@ -1,0 +1,13 @@
+<div>
+  <form [formGroup]="formData" class="input-form" (ngSubmit)="handleSubmit()">
+    <input
+      formControlName="taskName"
+      class="input-task"
+      type="text"
+      name=""
+      value=""
+      placeholder="Enter task name..."
+    />
+    <button type="submit" class="btn-submit btn">ADD</button>
+  </form>
+</div>

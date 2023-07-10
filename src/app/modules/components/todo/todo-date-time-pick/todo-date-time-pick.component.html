@@ -1,0 +1,12 @@
+<div>
+  <form class="dateTimePick-form">
+    <label class="due-data" for="">Due date:</label>
+    <input
+      class="dateTime-local"
+      type="datetime-local"
+      (input)="onDateChange($event)"
+      name=""
+      [value]="dateTimeDefault"
+    />
+  </form>
+</div>

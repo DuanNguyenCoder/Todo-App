@@ -1,0 +1,68 @@
+.task {
+  display: flex;
+  position: relative;
+  background: rgb(96, 12, 255);
+  margin-right: 10px;
+  box-shadow: 3px 4px 10px black;
+  /* border: 5px solid red; */
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  .details-task {
+    padding: 10px 10px 10px 0px;
+    flex-grow: 1;
+    p {
+      margin: 0;
+    }
+    .textDecorate {
+      text-decoration: line-through;
+      text-decoration-color: rgb(255, 99, 71);
+      text-decoration-thickness: 3px;
+    }
+  }
+  .btn-task {
+    width: 30px;
+    height: 30px;
+    color: white;
+    margin: 10px 10px 0 0;
+    border-radius: 5px;
+  }
+  .btn-delete {
+    background-color: rgb(255, 99, 71);
+  }
+  .btn-edit {
+    padding: 0;
+    background-color: rgb(232, 180, 61);
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    accent-color: rgb(84, 159, 84);
+  }
+}
+
+.effect {
+  border: 3px solid rgb(255, 255, 255);
+  animation-name: flicker;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  // animation-direction: alternate;
+}
+
+@keyframes flicker {
+  to {
+    border: 3px solid red;
+  }
+}
+
+.expired {
+  background-color: lightcoral;
+}
+
+.nomarl {
+  background-color: linear-gradient(
+    90deg,
+    rgba(96, 12, 255, 1) 0%,
+    rgba(124, 6, 252, 1) 50%,
+    rgba(152, 1, 250, 1) 100%
+  );
+}

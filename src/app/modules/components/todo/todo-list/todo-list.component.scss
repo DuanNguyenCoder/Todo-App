@@ -1,0 +1,42 @@
+.list-head {
+  display: flex;
+  .find-form {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .btn-find {
+    color: white;
+    width: 55px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(96, 12, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(96, 12, 255, 1) 0%,
+      rgba(124, 6, 252, 1) 50%,
+      rgba(152, 1, 250, 1) 100%
+    );
+  }
+  .input-find {
+    margin-top: 5px;
+    width: 95%;
+    background: transparent;
+    border: none;
+    font-size: medium;
+    border-bottom: 1px solid lightblue;
+    color: white;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.list-task {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  margin-bottom: 20px;
+}

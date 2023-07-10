@@ -1,0 +1,50 @@
+<div>
+  <form
+    [ngClass]="[
+      isExpired ? 'task expired' : 'task nomarl',
+      !isExpired && expAfterOneHour && !task.status ? 'effect' : ''
+    ]"
+  >
+    <app-update-form [Task]="task" [listTask]="listTask"></app-update-form>
+    <input
+      class="checkbox-task"
+      (change)="onChangeStatus()"
+      type="checkbox"
+      [disabled]="isExpired"
+      name=""
+      value=""
+      [checked]="task.status"
+    />
+    <div class="details-task">
+      <label for="" [ngClass]="{ textDecorate: task.status }">{{
+        task.taskName
+      }}</label>
+      <p *ngIf="isExpired">EXPIRED</p>
+      <p
+        [ngStyle]="{ color: 'black' }"
+        *ngIf="expAfterOneHour && !isExpired && !task.status"
+      >
+        *Expires after {{ minutes }} minutes
+      </p>
+      <p *ngIf="!isExpired" [ngClass]="{ textDecorate: task.status }">
+        expired at: {{ task.date.replace("T", " ") }}
+      </p>
+    </div>
+    <button
+      class="btn-task btn btn-edit"
+      #button
+      [disabled]="isExpired"
+      (click)="onUpdate(task)"
+      type="button"
+    >
+      <i class="fa-solid fa-pen-to-square"></i>
+    </button>
+    <button
+      class="btn-task btn btn-delete"
+      type="button"
+      (click)="onDelete(task.id)"
+    >
+      <i class="fa-solid fa-circle-xmark"></i>
+    </button>
+  </form>
+</div>

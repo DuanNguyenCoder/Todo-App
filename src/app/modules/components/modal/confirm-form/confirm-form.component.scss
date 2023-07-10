@@ -1,0 +1,49 @@
+.confirm-form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px black;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  justify-content: center;
+  .btn-close {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  label {
+    text-align: center;
+    color: black;
+  }
+  .confirm-body {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    .btn-yes {
+      background-color: rgb(79, 198, 79);
+    }
+    .btn-cancel {
+      background-color: orangered;
+    }
+    input {
+      color: white;
+      width: 80px;
+      height: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

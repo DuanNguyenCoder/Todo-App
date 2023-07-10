@@ -1,0 +1,24 @@
+.dateTimePick-form {
+  border-bottom: 1px solid white;
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  .due-data {
+    font-size: large;
+  }
+  .dateTime-local {
+    background: transparent;
+    border: none;
+    color: white;
+  }
+  ::-webkit-calendar-picker-indicator {
+    background-color: white;
+    border-radius: 3px;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<form class="confirm-form" *ngIf="openConfirm">
+  <button type="button" class="btn-close" (click)="onClose()">X</button>
+  <label for="">Do you want delete task?</label>
+  <div class="confirm-body">
+    <input
+      type="button"
+      class="btn-yes"
+      name=""
+      value="Yes"
+      (click)="onYes()"
+    />
+    <input
+      type="button"
+      class="btn-cancel"
+      name=""
+      value="Cancel"
+      (click)="onClose()"
+    />
+  </div>
+</form>

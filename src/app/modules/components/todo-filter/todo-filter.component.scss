@@ -1,0 +1,12 @@
+.filter-form {
+  display: flex;
+  border-top: 1px solid white;
+  justify-content: space-between;
+  .mg {
+    margin-top: 10px;
+  }
+  .forcus-filter {
+    color: orangered;
+    border-color: orangered;
+  }
+}
